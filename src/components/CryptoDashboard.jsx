@@ -1,0 +1,2 @@
+// src/components/CryptoDashboard.jsx
+import React, { useState, useMemo } from 'react';\nimport { useCryptoData } from '../hooks/useCryptoData';\nimport CryptoSearch from './CryptoSearch';\nimport CryptoTable from './CryptoTable';\nexport default function CryptoDashboard() {\n  const data = useCryptoData();\n  const [query, setQuery] = useState('');\n  const filtered = useMemo(() => data.filter(c => c.name.toLowerCase().includes(query)), [data, query]);\n  return (<div className="p-4"><CryptoSearch onSearch={setQuery} /><CryptoTable data={filtered} /></div>);\n}
