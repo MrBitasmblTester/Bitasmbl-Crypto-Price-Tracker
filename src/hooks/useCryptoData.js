@@ -1,0 +1,2 @@
+// src/hooks/useCryptoData.js
+import { useState, useEffect } from 'react';\nexport function useCryptoData() {\n  const [data, setData] = useState([]);\n  useEffect(() => {\n    // fetch from CoinGecko API and setData\n  }, []);\n  return data;\n}
