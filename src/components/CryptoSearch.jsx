@@ -1,0 +1,2 @@
+// src/components/CryptoSearch.jsx
+import React from 'react';\nexport default function CryptoSearch({ onSearch }) {\n  return (<input className="border p-2" placeholder="Search" onChange={e => onSearch(e.target.value)} />);\n}
